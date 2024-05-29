@@ -3,21 +3,16 @@ package com.wellingtonm.mypersonalfinance.modules.entity;
 import com.wellingtonm.mypersonalfinance.enums.LauchStatus;
 import com.wellingtonm.mypersonalfinance.enums.LaunchType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.convert.Jsr310Converters;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Data
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Builder
 @Table(name = "launch", schema = "finance")
 public class Launch {
 
